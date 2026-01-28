@@ -1,0 +1,1 @@
+CREATE INDEX ON "refreshment" ("participant_congress_id", "created_at");

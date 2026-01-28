@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX ON "conference_day" ("congress_id", "date");

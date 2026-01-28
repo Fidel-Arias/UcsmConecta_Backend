@@ -28,9 +28,9 @@ data class DataRequestCongreso(
     @get:NotNull(message = "El numero de refrigerios es obligatorio")
     val numRefrigerios: Int,
 
-    @get:NotNull(message = "El id de la escuela profesional es obligatorio")
-    @get:NotBlank(message = "La contraseña no puede estar en blanco")
-    @get:NotEmpty(message = "La contraseña no puede estar vacia")
-    @get:Size(min = 8, message = "El codigo es de al menos 8 caracteres")
+    @get:NotNull(message = "El codigo de la escuela profesional es obligatorio")
+    @get:NotBlank(message = "El codigo de la escuela profesional no puede estar en blanco")
+    @get:NotEmpty(message = "El codigo de la escuela profesional no puede estar vacia")
+    @get:Size(min = 8, message = "El codigo de la escuela profesional es de al menos 8 caracteres")
     val escuelaProfesionalCod: String
 )

@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX ON "participant_congress" ("participant_id", "congress_id");

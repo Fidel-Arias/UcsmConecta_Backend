@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX ON "presentation_registration" ("participant_congress_id", "time_block_id");

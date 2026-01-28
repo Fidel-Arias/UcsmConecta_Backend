@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX ON "attendance" ("participant_congress_id", "time_block_id");
