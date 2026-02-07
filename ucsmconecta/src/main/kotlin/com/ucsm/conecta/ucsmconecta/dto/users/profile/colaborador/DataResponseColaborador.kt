@@ -1,7 +1,6 @@
 package com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
 
 data class DataResponseColaborador(
     val id: Long,

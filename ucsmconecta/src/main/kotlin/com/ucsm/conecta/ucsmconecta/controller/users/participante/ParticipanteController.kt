@@ -1,23 +1,22 @@
 package com.ucsm.conecta.ucsmconecta.controller.users.participante
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.bloques.Bloque
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.valoracion.Comentario
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.valoracion.Votacion
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataResultCongreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataResultBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.dia.DataResultDiaAsistencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataResultPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataResultUbicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.comentarios.DataRequestComentario
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.comentarios.DataResponseComentario
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.votaciones.DataRequestVotacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.votaciones.DataResponseVotacion
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResponseParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResponseTipoParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResultParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataResultPonente
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.bloques.Bloque
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.valoracion.Comentario
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.valoracion.Votacion
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.Participante
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataResultCongreso
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataResultBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.dia.DataResultDiaAsistencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataResultPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataResultUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.comentarios.DataRequestComentario
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.comentarios.DataResponseComentario
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.votaciones.DataRequestVotacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.votaciones.DataResponseVotacion
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantResponse
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantTypeResponse
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantResult
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.asistencia.AsistenciaService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.bloques.BloqueService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.valoracion.ComentarioService
@@ -54,7 +53,7 @@ class ParticipanteController @Autowired constructor(
     /******** ENDPOINTS PARA LA ENTIDAD PARTICIPANTE ********/
     // Metodo para obtener un participante por su ID
     @GetMapping("/{id}")
-    fun getParticipanteById(@PathVariable id: Long): ResponseEntity<DataResponseParticipante> {
+    fun getParticipanteById(@PathVariable id: Long): ResponseEntity<ParticipantResponse> {
         // 1. Obtener el nombre de usuario (numDocumento/email) del contexto de seguridad
         val authentication = SecurityContextHolder.getContext().authentication
         val usernameAutenticado = (authentication.principal as String)
@@ -72,7 +71,7 @@ class ParticipanteController @Autowired constructor(
             throw AccessDeniedException("Acceso denegado. Un participante solo puede acceder a su propia información.")
         }
 
-        val dataResponseParticipante = DataResponseParticipante(
+        val participantResponse = ParticipantResponse(
             id = participante.id!!,
             nombres = participante.nombres,
             apPaterno = participante.apPaterno,
@@ -84,7 +83,7 @@ class ParticipanteController @Autowired constructor(
                 nombre = participante.escuelaProfesional.nombre,
                 codigo = participante.escuelaProfesional.codigo
             ),
-            tipoParticipante = DataResponseTipoParticipante(
+            tipoParticipante = ParticipantTypeResponse(
                 id = participante.tipoParticipante.id!!,
                 descripcion = participante.tipoParticipante.descripcion
             ),
@@ -96,7 +95,7 @@ class ParticipanteController @Autowired constructor(
             qrCode = participante.qr_code
         )
 
-        return ResponseEntity.ok(dataResponseParticipante)
+        return ResponseEntity.ok(participantResponse)
     }
 
     @GetMapping("/contar")
@@ -159,7 +158,7 @@ class ParticipanteController @Autowired constructor(
             comentario = comentario.texto,
             fecha = comentario.fecha,
             hora = comentario.hora,
-            participante = DataResultParticipante(
+            participante = ParticipantResult(
                 nombres = comentario.participante.nombres,
                 apPaterno = comentario.participante.apPaterno,
                 apMaterno = comentario.participante.apMaterno,
@@ -192,7 +191,7 @@ class ParticipanteController @Autowired constructor(
                 comentario = comentario.texto,
                 fecha = comentario.fecha,
                 hora = comentario.hora,
-                participante = DataResultParticipante(
+                participante = ParticipantResult(
                     nombres = comentario.participante.nombres,
                     apPaterno = comentario.participante.apPaterno,
                     apMaterno = comentario.participante.apMaterno,
@@ -215,7 +214,7 @@ class ParticipanteController @Autowired constructor(
         val dataResponseVotacion = DataResponseVotacion(
             id = votacion.id!!,
             score = votacion.score,
-            participante = DataResultParticipante(
+            participante = ParticipantResult(
                 nombres = votacion.participante.nombres,
                 apPaterno = votacion.participante.apPaterno,
                 apMaterno = votacion.participante.apMaterno,
@@ -257,7 +256,7 @@ class ParticipanteController @Autowired constructor(
             DataResponseVotacion(
                 id = votacion.id!!,
                 score = votacion.score,
-                participante = DataResultParticipante(
+                participante = ParticipantResult(
                     nombres = votacion.participante.nombres,
                     apPaterno = votacion.participante.apPaterno,
                     apMaterno = votacion.participante.apMaterno,

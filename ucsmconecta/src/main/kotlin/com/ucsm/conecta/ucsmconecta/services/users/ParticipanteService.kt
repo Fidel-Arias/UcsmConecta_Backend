@@ -1,12 +1,12 @@
 package com.ucsm.conecta.ucsmconecta.services.users
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.TipoParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.register.participante.UpdateDataParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.ParticipanteBusquedaDTO
-import com.ucsm.conecta.ucsmconecta.dto.users.register.participante.RegisterParticipanteDataforColab
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.Participante
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.TipoParticipante
+import com.ucsm.conecta.ucsmconecta.dto.register.participante.UpdateDataParticipante
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipanteBusquedaDTO
+import com.ucsm.conecta.ucsmconecta.dto.register.participante.RegisterParticipanteDataforColab
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.services.universidad.carrera.EscuelaProfesionalService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService
@@ -130,7 +130,7 @@ class ParticipanteService @Autowired constructor(
     fun searchByNumDocumento(numDocumento: String): Participante = participanteRepository.findByNumDocumento(numDocumento)
         .orElseThrow { ResourceNotFoundException("Nº de documento $numDocumento desconocido") }
 
-    // Metodo para buscar participantes por nombres
+    // Metodo para buscar participantes por names
     fun searchByNombres(nombres: String): List<ParticipanteBusquedaDTO> = participanteRepository.findByNombres(nombres)
 
     // Metodo para buscar participantes por apellidos

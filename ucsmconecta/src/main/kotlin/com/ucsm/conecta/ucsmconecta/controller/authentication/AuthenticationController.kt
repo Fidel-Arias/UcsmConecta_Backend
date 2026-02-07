@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.controller.authentication
 
-import com.ucsm.conecta.ucsmconecta.dto.users.auth.LoginRequest
-import com.ucsm.conecta.ucsmconecta.dto.users.auth.LoginResponse
+import com.ucsm.conecta.ucsmconecta.dto.auth.LoginRequest
+import com.ucsm.conecta.ucsmconecta.dto.auth.LoginResponse
 import com.ucsm.conecta.ucsmconecta.infra.security.JwtUtil
 import com.ucsm.conecta.ucsmconecta.services.users.CustomUserDetailsService
 import org.springframework.beans.factory.annotation.Autowired

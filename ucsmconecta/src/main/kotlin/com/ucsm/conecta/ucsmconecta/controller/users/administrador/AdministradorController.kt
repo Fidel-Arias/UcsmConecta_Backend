@@ -1,50 +1,39 @@
 package com.ucsm.conecta.ucsmconecta.controller.users.administrador
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.bloques.Bloque
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ponencias.Ponencia
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ubicacion.Ubicacion
-import com.ucsm.conecta.ucsmconecta.domain.users.administrador.Administrador
-import com.ucsm.conecta.ucsmconecta.domain.users.colaborador.Colaborador
-import com.ucsm.conecta.ucsmconecta.domain.users.colaborador.CongresoColaborador
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.domain.users.ponente.Ponente
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataResponseCongreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataResultCongreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.asistencia.DataResponseAsistencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataRequestBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataResponseBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataResultBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.UpdateDataBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.dia.DataResponseDia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.dia.DataResultDia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.dia.DataResultDiaAsistencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataRequestPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataResponsePonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataResultPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.UpdateDataPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataRequestUbicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataResponseUbicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataResultUbicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.gradoacademico.DataResponseGradoAcademico
-import com.ucsm.conecta.ucsmconecta.dto.users.register.admin.UpdateDataAdministrador
-import com.ucsm.conecta.ucsmconecta.dto.users.register.colaborador.RegisterColaboradorData
-import com.ucsm.conecta.ucsmconecta.dto.users.register.colaborador.UpdateDataColaborador
-import com.ucsm.conecta.ucsmconecta.dto.users.register.participante.UpdateDataParticipante
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataResponseCongreso
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataResultCongreso
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.asistencia.DataResponseAsistencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataRequestBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataResponseBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataResultBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.UpdateDataBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.dia.DataResponseDia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.dia.DataResultDia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.dia.DataResultDiaAsistencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataRequestPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataResponsePonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataResultPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.UpdateDataPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataRequestUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataResponseUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataResultUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.gradoacademico.DataResponseGradoAcademico
+import com.ucsm.conecta.ucsmconecta.dto.register.admin.UpdateDataAdministrador
+import com.ucsm.conecta.ucsmconecta.dto.register.colaborador.RegisterColaboradorData
+import com.ucsm.conecta.ucsmconecta.dto.register.colaborador.UpdateDataColaborador
+import com.ucsm.conecta.ucsmconecta.dto.register.participante.UpdateDataParticipante
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.admin.DataResponseAdmin
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.ColaboradorBusquedaDTO
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResponseColaborador
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResponseColaboradorWithCongreso
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResultColaborador
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResponseParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResponseTipoParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResultParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.ParticipanteBusquedaDTO
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataRequestPonente
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataResponsePonente
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataResultPonente
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.UpdateDataPonente
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantResponse
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantTypeResponse
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantResult
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipanteBusquedaDTO
+import com.ucsm.conecta.ucsmconecta.dto.congress.speaker.SpeakerRequest
+import com.ucsm.conecta.ucsmconecta.dto.congress.speaker.SpeakerResponse
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.asistencia.AsistenciaService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.bloques.BloqueService
@@ -295,12 +284,12 @@ class AdministradorController @Autowired constructor(
     /******** ENDPOINTS PARA LA ENTIDAD PONENTE ********/
     // Endpoint para crear una nuevo ponente
     @PostMapping("/create-ponente")
-    fun createPonente(@RequestBody @Valid dataRequestPonente: DataRequestPonente, uriComponentsBuilder: ServletUriComponentsBuilder): ResponseEntity<DataResponsePonente> {
+    fun createPonente(@RequestBody @Valid speakerRequest: SpeakerRequest, uriComponentsBuilder: ServletUriComponentsBuilder): ResponseEntity<SpeakerResponse> {
         // Crear la ponencia utilizando el servicio
-        val ponente: Ponente = ponenteService.createPonente(dataRequestPonente)
+        val ponente: Ponente = ponenteService.createPonente(speakerRequest)
 
         // Mapear la entidad Ponencia a DataResponsePonencia
-        val dataResponsePonente = DataResponsePonente(
+        val speakerResponse = SpeakerResponse(
             id = ponente.id!!,
             nombres = ponente.nombres,
             apellidos = ponente.apellidos,
@@ -320,15 +309,15 @@ class AdministradorController @Autowired constructor(
             .buildAndExpand(ponente.id).toUri()
 
         // Retornar la respuesta con el código 201 Created y el cuerpo de la ponencia creada
-        return ResponseEntity.created(uri).body(dataResponsePonente)
+        return ResponseEntity.created(uri).body(speakerResponse)
     }
 
     // Endpoint para buscar un ponente por su id
     @GetMapping("/ponente/{id}")
-    fun searchPonenteById(@PathVariable id: Long): ResponseEntity<DataResponsePonente> {
+    fun searchPonenteById(@PathVariable id: Long): ResponseEntity<SpeakerResponse> {
         val ponente: Ponente = ponenteService.getPonenteById(id)
 
-        val dataResponsePonente = DataResponsePonente(
+        val speakerResponse = SpeakerResponse(
             id = ponente.id!!,
             nombres = ponente.nombres,
             apellidos = ponente.apellidos,
@@ -343,12 +332,12 @@ class AdministradorController @Autowired constructor(
             )
         )
 
-        return ResponseEntity.ok(dataResponsePonente)
+        return ResponseEntity.ok(speakerResponse)
     }
 
     // Endpoint para listar todos los ponentes
     @GetMapping("/ponentes")
-    fun listAllPonentes(): ResponseEntity<List<DataResponsePonente>> {
+    fun listAllPonentes(): ResponseEntity<List<SpeakerResponse>> {
         val ponentes: List<Ponente> = ponenteService.getAllPonentes()
 
         if (ponentes.isEmpty()) {
@@ -356,7 +345,7 @@ class AdministradorController @Autowired constructor(
         }
 
         val dataResponsePonentes = ponentes.map { ponente ->
-            DataResponsePonente(
+            SpeakerResponse(
                 id = ponente.id!!,
                 nombres = ponente.nombres,
                 apellidos = ponente.apellidos,
@@ -743,10 +732,10 @@ class AdministradorController @Autowired constructor(
         return ResponseEntity.ok(dataResponseColaborador)
     }
 
-    // Endpoint para buscar un colaborador por sus nombres
+    // Endpoint para buscar un colaborador por sus names
     @GetMapping("/colaborador/search/nombres")
     fun searchColaboradoresByNombres(@RequestParam nombres: String): ResponseEntity<List<ColaboradorBusquedaDTO>> {
-        // Buscar colaboradores por nombres
+        // Buscar colaboradores por names
         val colaboradores: List<ColaboradorBusquedaDTO> = colaboradorService.searchByNombres(nombres)
 
         return if (colaboradores.isEmpty()) {
@@ -808,15 +797,15 @@ class AdministradorController @Autowired constructor(
     }
     // Endpoint para obtener todos los participantes
     @GetMapping("/participantes")
-    fun getAllParticipantes(): ResponseEntity<List<DataResponseParticipante>> {
+    fun getAllParticipantes(): ResponseEntity<List<ParticipantResponse>> {
         val participantes = participanteService.getAllParticipantes()
 
         if (participantes.isEmpty()) {
             return ResponseEntity.noContent().build()
         }
 
-        val dataResponseParticipantes = participantes.map { participante ->
-            DataResponseParticipante(
+        val participantResponseParticipantes = participantes.map { participante ->
+            ParticipantResponse(
                 id = participante.id!!,
                 nombres = participante.nombres,
                 apPaterno = participante.apPaterno,
@@ -831,7 +820,7 @@ class AdministradorController @Autowired constructor(
                     )
                 },
                 tipoParticipante = participante.tipoParticipante.let {
-                    DataResponseTipoParticipante(
+                    ParticipantTypeResponse(
                         id = it.id!!,
                         descripcion = it.descripcion
                     )
@@ -847,7 +836,7 @@ class AdministradorController @Autowired constructor(
             )
         }
 
-        return ResponseEntity.ok(dataResponseParticipantes)
+        return ResponseEntity.ok(participantResponseParticipantes)
     }
 
     // Endpoint para buscar participantes por apellidos
@@ -892,10 +881,10 @@ class AdministradorController @Autowired constructor(
         return ResponseEntity.ok(dataResponseParticipante)
     }
 
-    // Endpoint para buscar participantes por nombres
+    // Endpoint para buscar participantes por names
     @GetMapping("/participante/search/nombres")
     fun searchParticipanteByNombres(@RequestParam nombres: String): ResponseEntity<List<ParticipanteBusquedaDTO>> {
-        // Buscar participantes por nombres
+        // Buscar participantes por names
         val participantes: List<ParticipanteBusquedaDTO> = participanteService.searchByNombres(nombres)
 
         if (participantes.isEmpty()) {
@@ -933,7 +922,7 @@ class AdministradorController @Autowired constructor(
             id = asistencia.id!!,
             fecha = asistencia.fecha,
             hora = asistencia.hora,
-            participante = DataResultParticipante(
+            participante = ParticipantResult(
                 nombres = asistencia.participante.nombres,
                 apPaterno = asistencia.participante.apPaterno,
                 apMaterno = asistencia.participante.apMaterno,

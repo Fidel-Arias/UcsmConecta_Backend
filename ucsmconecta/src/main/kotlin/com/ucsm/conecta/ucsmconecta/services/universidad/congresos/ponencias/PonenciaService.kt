@@ -1,10 +1,10 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.ponencias
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ponencias.Ponencia
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.ponencias.Ponencia
 import com.ucsm.conecta.ucsmconecta.domain.users.ponente.Ponente
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataRequestPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.UpdateDataPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataRequestPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.UpdateDataPonencia
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.ponencias.PonenciaRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService

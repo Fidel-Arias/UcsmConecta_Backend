@@ -1,6 +1,6 @@
 package com.ucsm.conecta.ucsmconecta.infra.security
 
-import com.ucsm.conecta.ucsmconecta.dto.users.register.CustomUserDetails
+import com.ucsm.conecta.ucsmconecta.dto.register.CustomUserDetails
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import io.jsonwebtoken.security.Keys

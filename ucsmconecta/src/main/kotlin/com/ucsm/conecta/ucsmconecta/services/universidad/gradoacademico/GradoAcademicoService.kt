@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.gradoacademico
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.gradoacademico.GradoAcademico
-import com.ucsm.conecta.ucsmconecta.dto.universidad.gradoacademico.DataRequestGradoAcademico
+import com.ucsm.conecta.ucsmconecta.domain.university.gradoacademico.GradoAcademico
+import com.ucsm.conecta.ucsmconecta.dto.university.gradoacademico.DataRequestGradoAcademico
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.gradoacademico.GradoAcademicoRepository
 import jakarta.transaction.Transactional

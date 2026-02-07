@@ -1,9 +1,9 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.bloques
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.bloques.Bloque
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ubicacion.Ubicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataRequestBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.UpdateDataBloque
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.bloques.Bloque
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.ubicacion.Ubicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataRequestBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.UpdateDataBloque
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.bloques.BloqueRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.dia.DiaService

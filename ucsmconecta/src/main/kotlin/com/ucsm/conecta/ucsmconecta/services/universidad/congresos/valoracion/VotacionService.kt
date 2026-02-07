@@ -1,10 +1,10 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.valoracion
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ponencias.Ponencia
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.valoracion.Votacion
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.votaciones.DataRequestVotacion
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.ponencias.Ponencia
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.valoracion.Votacion
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.Participante
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.votaciones.DataRequestVotacion
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.valoracion.VotacionRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService

@@ -1,6 +1,6 @@
 package com.ucsm.conecta.ucsmconecta.util
 
-import com.ucsm.conecta.ucsmconecta.dto.users.register.participante.RegisterParticipanteData
+import com.ucsm.conecta.ucsmconecta.dto.register.participante.RegisterParticipanteData
 import jakarta.validation.Validation
 import org.apache.poi.ss.usermodel.Cell
 import org.apache.poi.ss.usermodel.CellType

@@ -1,8 +1,8 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.valoracion
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.valoracion.Comentario
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.valoracion.comentarios.DataRequestComentario
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.valoracion.Comentario
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.Participante
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.valoracion.comentarios.DataRequestComentario
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.valoracion.ComentarioRepository
 import com.ucsm.conecta.ucsmconecta.services.users.ParticipanteService
 import jakarta.transaction.Transactional

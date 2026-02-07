@@ -1,10 +1,10 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.asistencia
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.asistencia.Asistencia
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.bloques.Bloque
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.Participante
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.asistencia.DataRequestAsistencia
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.asistencia.Asistencia
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.bloques.Bloque
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.Participante
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.asistencia.DataRequestAsistencia
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.asistencia.AsistenciaRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService

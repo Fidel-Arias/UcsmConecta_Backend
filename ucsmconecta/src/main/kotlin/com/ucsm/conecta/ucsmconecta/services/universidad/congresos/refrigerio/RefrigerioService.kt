@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.refrigerio
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.refrigerio.Refrigerio
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.refrigerio.DataRequestRefrigerio
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.refrigerio.Refrigerio
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.refrigerio.DataRequestRefrigerio
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.refrigerio.RefrigerioRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService

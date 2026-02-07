@@ -1,4 +1,4 @@
--- FUNCTION: Para la busqueda de nombres de colaboradores y admin
+-- FUNCTION: Para la busqueda de names de colaboradores y admin
 CREATE OR REPLACE FUNCTION buscar_user_nombres(p_busqueda TEXT)
     RETURNS TABLE(
                      nombres VARCHAR,
@@ -18,7 +18,7 @@ BEGIN
             c.estado
         FROM colaborador c
         WHERE
-            -- Buscar por nombres
+            -- Buscar por names
             LOWER(c.nombres) LIKE LOWER(CONCAT('%', p_busqueda, '%'));
 END;
 $$ LANGUAGE plpgsql;

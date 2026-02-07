@@ -1,8 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.carrera
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataRequestEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataRequestEscuelaProfesional
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.carrera.EscuelaProfesionalRepository
 import com.ucsm.conecta.ucsmconecta.util.UUIDGenerator

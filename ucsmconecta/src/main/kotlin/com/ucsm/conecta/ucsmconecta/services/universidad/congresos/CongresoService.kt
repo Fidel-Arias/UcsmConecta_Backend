@@ -1,8 +1,8 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataRequestCongreso
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataRequestCongreso
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.CongresoRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.carrera.EscuelaProfesionalService

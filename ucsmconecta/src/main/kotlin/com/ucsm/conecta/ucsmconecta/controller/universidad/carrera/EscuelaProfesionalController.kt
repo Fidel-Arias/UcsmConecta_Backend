@@ -1,8 +1,8 @@
 package com.ucsm.conecta.ucsmconecta.controller.universidad.carrera
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataRequestEscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataRequestEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
 import com.ucsm.conecta.ucsmconecta.services.universidad.carrera.EscuelaProfesionalService
 import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired

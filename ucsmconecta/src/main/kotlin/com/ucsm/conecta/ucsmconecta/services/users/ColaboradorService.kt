@@ -1,10 +1,10 @@
 package com.ucsm.conecta.ucsmconecta.services.users
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
 import com.ucsm.conecta.ucsmconecta.domain.users.colaborador.Colaborador
 import com.ucsm.conecta.ucsmconecta.domain.users.colaborador.CongresoColaborador
-import com.ucsm.conecta.ucsmconecta.dto.users.register.colaborador.RegisterColaboradorData
-import com.ucsm.conecta.ucsmconecta.dto.users.register.colaborador.UpdateDataColaborador
+import com.ucsm.conecta.ucsmconecta.dto.register.colaborador.RegisterColaboradorData
+import com.ucsm.conecta.ucsmconecta.dto.register.colaborador.UpdateDataColaborador
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.ColaboradorBusquedaDTO
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.users.colaborador.ColaboradorRepository
@@ -64,7 +64,7 @@ class ColaboradorService @Autowired constructor(
         return colaboradorRepository.findByApellidos(busqueda)
     }
 
-    // Metodo para buscar colaboradores por nombres
+    // Metodo para buscar colaboradores por names
     fun searchByNombres(nombres: String): List<ColaboradorBusquedaDTO> {
         val resultados = colaboradorRepository.findByNombres(nombres)
             .filter { it.estado }

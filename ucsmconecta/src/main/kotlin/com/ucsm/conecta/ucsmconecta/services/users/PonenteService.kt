@@ -1,8 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.users
 
 import com.ucsm.conecta.ucsmconecta.domain.users.ponente.Ponente
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataRequestPonente
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.UpdateDataPonente
+import com.ucsm.conecta.ucsmconecta.dto.congress.speaker.SpeakerRequest
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.users.ponente.PonenteRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService
@@ -21,16 +20,16 @@ class PonenteService @Autowired constructor(
 ) {
     // Metodo para crear un nuevo ponente
     @Transactional
-    fun createPonente(@RequestBody @Valid dataRequestPonente: DataRequestPonente): Ponente {
+    fun createPonente(@RequestBody @Valid speakerRequest: SpeakerRequest): Ponente {
         // Buscar grado academico relacionado
-        val gradoAcademico = gradoAcademicoService.getGradoAcademicoById(dataRequestPonente.gradoAcademicoId)
+        val gradoAcademico = gradoAcademicoService.getGradoAcademicoById(speakerRequest.gradoAcademicoId)
 
         // Buscar congreso relacionado
-        val congreso = congresoService.searchByCodigo(dataRequestPonente.congresoCod)
+        val congreso = congresoService.searchByCodigo(speakerRequest.congresoCod)
 
         return ponenteRepository.save(Ponente(
-            nombres = dataRequestPonente.nombres,
-            apellidos = dataRequestPonente.apellidos,
+            nombres = speakerRequest.names,
+            apellidos = speakerRequest.apellidos,
             gradoAcademico = gradoAcademico,
             congreso = congreso
         ))
@@ -43,9 +42,9 @@ class PonenteService @Autowired constructor(
     // Método para obtener todos los ponentes
     fun getAllPonentes(): List<Ponente> = ponenteRepository.findAllByOrderByIdAsc()
 
-    // Método para obtener un ponente por sus nombres
+    // Método para obtener un ponente por sus names
     fun getPonenteByNombres(nombres: String): Ponente = ponenteRepository.findByNombres(nombres)
-        .orElseThrow { ResourceNotFoundException("Ponente no encontrado por sus nombres") }
+        .orElseThrow { ResourceNotFoundException("Ponente no encontrado por sus names") }
 
     // Método para eliminar un ponente por su ID
     @Transactional

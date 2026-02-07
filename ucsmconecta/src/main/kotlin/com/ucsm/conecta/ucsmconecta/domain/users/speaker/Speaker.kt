@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.domain.users.speaker
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congress.Congress
-import com.ucsm.conecta.ucsmconecta.domain.universidad.academic_degree.AcademicDegree
+import com.ucsm.conecta.ucsmconecta.domain.university.congress.Congress
+import com.ucsm.conecta.ucsmconecta.domain.university.academic_degree.AcademicDegree
 import jakarta.persistence.*
 
 @Entity

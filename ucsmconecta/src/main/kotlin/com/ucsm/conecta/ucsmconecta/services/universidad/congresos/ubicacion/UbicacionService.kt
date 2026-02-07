@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.ubicacion
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ubicacion.Ubicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataRequestUbicacion
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.ubicacion.Ubicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataRequestUbicacion
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.ubicacion.UbicacionRepository
 import jakarta.transaction.Transactional

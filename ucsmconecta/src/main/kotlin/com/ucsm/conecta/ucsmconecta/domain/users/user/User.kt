@@ -1,8 +1,8 @@
 package com.ucsm.conecta.ucsmconecta.domain.users.user
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.career.ProfessionalSchool
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congress.CongressUser
-import com.ucsm.conecta.ucsmconecta.domain.users.participante.ParticipantType
+import com.ucsm.conecta.ucsmconecta.domain.university.professional_school.ProfessionalSchool
+import com.ucsm.conecta.ucsmconecta.domain.university.congress.CongressUser
+import com.ucsm.conecta.ucsmconecta.domain.users.participant.ParticipantType
 import jakarta.persistence.CascadeType
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

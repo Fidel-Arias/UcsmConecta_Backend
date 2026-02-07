@@ -1,8 +1,8 @@
 package com.ucsm.conecta.ucsmconecta.controller.universidad.gradoacademico
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.gradoacademico.GradoAcademico
-import com.ucsm.conecta.ucsmconecta.dto.universidad.gradoacademico.DataRequestGradoAcademico
-import com.ucsm.conecta.ucsmconecta.dto.universidad.gradoacademico.DataResponseGradoAcademico
+import com.ucsm.conecta.ucsmconecta.domain.university.gradoacademico.GradoAcademico
+import com.ucsm.conecta.ucsmconecta.dto.university.gradoacademico.DataRequestGradoAcademico
+import com.ucsm.conecta.ucsmconecta.dto.university.gradoacademico.DataResponseGradoAcademico
 import com.ucsm.conecta.ucsmconecta.services.universidad.gradoacademico.GradoAcademicoService
 import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired

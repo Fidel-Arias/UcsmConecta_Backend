@@ -1,24 +1,23 @@
 package com.ucsm.conecta.ucsmconecta.controller.users.colaborador
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.bloques.Bloque
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.ubicacion.Ubicacion
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.bloques.Bloque
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.ubicacion.Ubicacion
 import com.ucsm.conecta.ucsmconecta.domain.users.colaborador.Colaborador
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataResultCongreso
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.asistencia.DataRequestAsistencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.bloques.DataResponseBloque
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.dia.DataResultDia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ponencias.DataResultPonencia
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.refrigerio.DataRequestRefrigerio
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.refrigerio.DataResponseRefrigerio
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataResponseUbicacion
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.ubicacion.DataResultUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataResultCongreso
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.asistencia.DataRequestAsistencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.bloques.DataResponseBloque
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.dia.DataResultDia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ponencias.DataResultPonencia
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.refrigerio.DataRequestRefrigerio
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.refrigerio.DataResponseRefrigerio
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataResponseUbicacion
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.ubicacion.DataResultUbicacion
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResponseColaborador
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResponseColaboradorWithCongreso
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.colaborador.DataResultColaborador
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.participante.DataResultParticipante
-import com.ucsm.conecta.ucsmconecta.dto.users.profile.ponentes.DataResultPonente
-import com.ucsm.conecta.ucsmconecta.dto.users.register.participante.RegisterParticipanteDataforColab
+import com.ucsm.conecta.ucsmconecta.dto.participant.ParticipantResult
+import com.ucsm.conecta.ucsmconecta.dto.register.participante.RegisterParticipanteDataforColab
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.asistencia.AsistenciaService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.bloques.BloqueService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.refrigerio.RefrigerioService
@@ -214,7 +213,7 @@ class ColaboradorController @Autowired constructor(
             id = refrigerio.id!!,
             fecha = refrigerio.fecha,
             hora = refrigerio.hora,
-            participante = DataResultParticipante(
+            participante = ParticipantResult(
                 nombres = refrigerio.participante.nombres,
                 apPaterno = refrigerio.participante.apPaterno,
                 apMaterno = refrigerio.participante.apMaterno,

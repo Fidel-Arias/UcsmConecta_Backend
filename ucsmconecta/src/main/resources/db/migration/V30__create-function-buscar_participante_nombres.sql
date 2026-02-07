@@ -1,4 +1,4 @@
--- FUNCTION: Para la busqqueda de nombres de participantes
+-- FUNCTION: Para la busqqueda de names de participantes
 CREATE OR REPLACE FUNCTION buscar_participante_nombres(p_busqueda TEXT)
     RETURNS TABLE(
                      nombres VARCHAR,
@@ -18,7 +18,7 @@ BEGIN
             p.estado
         FROM participante p
         WHERE
-            -- Buscar por nombres
+            -- Buscar por names
             LOWER(p.nombres) LIKE LOWER(CONCAT('%', p_busqueda, '%'));
 END;
 $$ LANGUAGE plpgsql;

@@ -1,6 +1,6 @@
 package com.ucsm.conecta.ucsmconecta.services.universidad.congresos.dia
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.dia.Dia
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.dia.Dia
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.universidad.congresos.dia.DiaRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService

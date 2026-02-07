@@ -1,9 +1,9 @@
 package com.ucsm.conecta.ucsmconecta.controller.authentication
 
-import com.ucsm.conecta.ucsmconecta.dto.universidad.carrera.DataResponseEscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.dto.universidad.congresos.DataResponseCongreso
+import com.ucsm.conecta.ucsmconecta.dto.university.carrera.DataResponseEscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.dto.university.congresos.DataResponseCongreso
 import com.ucsm.conecta.ucsmconecta.dto.users.profile.admin.DataResponseAdmin
-import com.ucsm.conecta.ucsmconecta.dto.users.register.admin.RegisterAdminWithCongresoData
+import com.ucsm.conecta.ucsmconecta.dto.register.admin.RegisterAdminWithCongresoData
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService
 import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.dia.DiaService
 import com.ucsm.conecta.ucsmconecta.services.users.AdminService

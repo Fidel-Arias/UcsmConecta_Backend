@@ -1,16 +1,15 @@
 package com.ucsm.conecta.ucsmconecta.services.users
 
-import com.ucsm.conecta.ucsmconecta.domain.universidad.carrera.EscuelaProfesional
-import com.ucsm.conecta.ucsmconecta.domain.universidad.congresos.Congreso
+import com.ucsm.conecta.ucsmconecta.domain.university.carrera.EscuelaProfesional
+import com.ucsm.conecta.ucsmconecta.domain.university.congresos.Congreso
 import com.ucsm.conecta.ucsmconecta.domain.users.administrador.Administrador
 import com.ucsm.conecta.ucsmconecta.domain.users.administrador.CongresoAdministrador
-import com.ucsm.conecta.ucsmconecta.dto.users.register.admin.RegisterAdminData
-import com.ucsm.conecta.ucsmconecta.dto.users.register.admin.UpdateDataAdministrador
+import com.ucsm.conecta.ucsmconecta.dto.register.admin.RegisterAdminData
+import com.ucsm.conecta.ucsmconecta.dto.register.admin.UpdateDataAdministrador
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.users.admin.AdminRepository
 import com.ucsm.conecta.ucsmconecta.repository.users.admin.CongresoAdministradorRepository
 import com.ucsm.conecta.ucsmconecta.services.universidad.carrera.EscuelaProfesionalService
-import com.ucsm.conecta.ucsmconecta.services.universidad.congresos.CongresoService
 import jakarta.transaction.Transactional
 import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired

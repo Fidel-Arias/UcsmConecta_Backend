@@ -1,7 +1,7 @@
 package com.ucsm.conecta.ucsmconecta.services.users
 
-import com.ucsm.conecta.ucsmconecta.dto.users.auth.LoginRequest
-import com.ucsm.conecta.ucsmconecta.dto.users.register.CustomUserDetails
+import com.ucsm.conecta.ucsmconecta.dto.auth.LoginRequest
+import com.ucsm.conecta.ucsmconecta.dto.register.CustomUserDetails
 import com.ucsm.conecta.ucsmconecta.exceptions.ResourceNotFoundException
 import com.ucsm.conecta.ucsmconecta.repository.users.admin.AdminRepository
 import com.ucsm.conecta.ucsmconecta.repository.users.colaborador.ColaboradorRepository
